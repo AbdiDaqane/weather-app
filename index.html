@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--CSS Library-->
+    <!--Bootstrap V5.2.1-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!--Javascript Library-->
+    <!--jQuery V3.6.1-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <!--Bootstrap V5.2.1-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!--Moment.js Library-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <!--Custom Library-->
+    <link rel="stylesheet" href="assets/" />
+  </head>
+  <body>
+    <!--Website Header Container-->
+    <header
+      class="vw-100 bg-blue-purple-grdt text-center user-select-none"
+    >
+      <h1 class="text-light fw-bolder">Weather Dashboard</h1>
+      
+    </header>
+   
+      <!--Searchbar and searchbtn-->
+      <div class="offcanvas-body d-flex flex-column">
+        <input class="form-control mb-4" id="searchBar"></input>
+        <button type="button"
+        class="btn btn-primary btn-lg align-self-center"
+        id="searchBtn"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#searchPannel">Search</button>
+        <h3 class="mt-3">Search History</h3>
+        <!--Clearbtn for Search History-->
+        <button id="clear" class="btn btn-danger btn-sm">Clear</button>
+        <!--Search History Container-->
+        <div class="d-flex flex-column" id="historyContainer">
+        </div>
+      </div>
+    </side>
+    <!--Main Content Container-->
+    <main class="m-0 vw-100" id="mainContentContainer">
+        <div class="row justify-content-center vw-100">
+          <!--Current weather card Container-->
+            <div class="card col-11 col-md-9 col-lg-8">
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title fw-bold"><span id="city"></span> <span id="dateNow">(2022/09/22)</span><img src="" width="80" id="iconNow"></h2>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" id="description"></li>
+                        <li class="list-group-item" id="tempNow"></li>
+                        <li class="list-group-item" id="windNow"></li>
+                        <li class="list-group-item" id="humidNow"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3 class="mt-3 fw-bold" id="test">Future 5 days forecast:</h3>
+        <!--5-days Forecast cards Container-->
+        <div class="row justify-content-around g-4 m-3" id="forecastContainer">
+          </div>
+      </main>
+      <!--Custom Script-->
+    <script src="./Assets/script.js"></script>
+
+    <!--footer area-->
+    <footer>
+        &copy; 2022 Abdirahman Daqane, Inc.
+        
+    </footer>
+  </body>
+</html>
